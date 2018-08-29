@@ -123,7 +123,7 @@ def display():
     print('*****************************************************************************')
     print('  ID       CPU    Memory    Swap   PID     Rx    Tx')
     for name in container_names:
-        print name[:7], ' ', containers[name]['cpu_percent'], '%', '  ', containers[name]['memory'], '%', ' ',\
+        print containers[name]['Name'], ' ', containers[name]['cpu_percent'], '%', '  ', containers[name]['memory'], '%', ' ',\
             containers[name]['swap'], '% ', containers[name]['pid'], '  ', containers[name]['rx_percent'], '   ', \
             containers[name]['tx_percent']
 
