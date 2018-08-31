@@ -121,11 +121,11 @@ def display():
     os.system('clear')
 
     print('*****************************************************************************')
-    print('  ID       CPU    Memory    Swap   PID     Rx    Tx')
+    print('  ID       CPU    Memory    Swap   PID     Rx    Tx   Name ')
     for name in container_names:
-        print containers[name]['Name'], ' ', containers[name]['cpu_percent'], '%', '  ', containers[name]['memory'], '%', ' ',\
+        print name[:7], ' ', containers[name]['cpu_percent'], '%', '  ', containers[name]['memory'], '%', ' ',\
             containers[name]['swap'], '% ', containers[name]['pid'], '  ', containers[name]['rx_percent'], '   ', \
-            containers[name]['tx_percent']
+            containers[name]['tx_percent'], '  ', containers[name]['Name']
 
 
 while True:
